@@ -90,10 +90,6 @@ const KrakenDisplay = React.memo(() => {
             LIQUID
           </p>
           <p>{kraken?.temperature || 0}°C</p>
-          <p>{kraken?.fan || 0} RPM</p>
-          <p>{kraken?.pump || 0} RPM</p>
-          <p>{kraken?.liquid || 0}°C</p>
-          <p>{kraken?.load || 0}%</p>
         </LiquidContainer>
 
         <RadialGaugeContainer>
@@ -117,7 +113,7 @@ const KrakenDisplay = React.memo(() => {
         <BottomContainer>
           {[
             { label: "CPU", value: cpu?.frequency || "0", unit: "MHz" },
-            { label: "PUMP", value: kraken?.fan || "0", unit: "RPM" },
+            { label: "RAM", value: ram?.inUse || "0", unit: "MB" },
             { label: "GPU", value: gpu?.frequency || "0", unit: "MHz" },
           ].map((item, index, array) => (
             <BottomItem key={index}>
