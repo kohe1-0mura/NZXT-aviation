@@ -6,18 +6,21 @@ const RadialGauge = React.memo((props) => {
   const { label, data, icon } = props;
   
   // label に基づいて開始角度と終了角度を設定
-  let startAngle, endAngle;
+  let startAngle, endAngle, isCounterClockwise;
   
-  if (label === "CPU") {
+  if (label === "cpu") {
     startAngle = 270; // 9時
     endAngle = 60;    // 2時
-  } else if (label === "GPU") {
+    isCounterClockwise = false;
+  } else if (label === "gpu") {
     startAngle = 90;   // 3時
     endAngle = 300;    // 10時
+    isCounterClockwise = true;
   } else {
     // デフォルトの角度
     startAngle = -45;
     endAngle = 90;
+    isCounterClockwise = false;
   }
   
   const options = {
@@ -100,13 +103,19 @@ const RadialGauge = React.memo((props) => {
 
   const series = [data || 0];
 
+  const chartStyle = isCounterClockwise
+    ? { transform: "scale(-1, 1)" } // 水平方向に反転
+    : {};
+
   return (
-    <ReactApexChart
-      options={options}
-      series={series}
-      type="radialBar"
-      height="350px"
-    />
+    <div style={chartStyle}>
+      <ReactApexChart
+        options={options}
+        series={series}
+        type="radialBar"
+        height="350px"
+      />
+    </div>
   );
 });
 
