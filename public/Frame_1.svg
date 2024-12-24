@@ -8,7 +8,7 @@
 </svg> -->
 
 <svg width="640" height="640" viewBox="0 0 640 640" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <line x1="100" y1="260" x2="540" y2="260" stroke="#606060" stroke-width="1"/>
+  <!-- <line x1="100" y1="260" x2="540" y2="260" stroke="#606060" stroke-width="1"/> -->
   
   <line x1="150" y1="497" x2="490" y2="497" stroke="#606060" stroke-width="1"/>
   
