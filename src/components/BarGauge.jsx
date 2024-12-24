@@ -40,7 +40,7 @@ const BarGauge = React.memo((props) => {
     },
     grid: {
       row: {
-        colors: ["#e5e5e5", "transparent"],
+        colors: ["#848484", "transparent"],
         opacity: 0.2,
       },
       xaxis: {
