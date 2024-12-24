@@ -42,6 +42,7 @@ const BarGauge = React.memo((props) => {
       row: {
         colors: ["#848484", "transparent"],
         opacity: 0.2,
+        borderRadius: 5, 
       },
       xaxis: {
         lines: {
@@ -53,7 +54,7 @@ const BarGauge = React.memo((props) => {
       bar: {
         horizontal: true,
         barHeight: "100%",
-        borderRadius: 10, 
+        borderRadius: 5, 
       },
     },
     dataLabels: {
