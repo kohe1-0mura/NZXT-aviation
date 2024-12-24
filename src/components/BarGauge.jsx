@@ -5,7 +5,7 @@ import React from "react";
 const BarGauge = React.memo((props) => {
   const options = {
     theme: {
-      mode: "dark",
+      mode: "light",
     },
     tooltip: {
       enabled: false,
@@ -62,9 +62,9 @@ const BarGauge = React.memo((props) => {
       colors: [
         function ({ value }) {
           if (value < 60) {
-            return "#00FF00";
+            return "#00FFFF";
           } else if (value >= 60 && value < 80) {
-            return "#FFA500";
+            return "#FF00FF";
           } else {
             return "#FF0000";
           }

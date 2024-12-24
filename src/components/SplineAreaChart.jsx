@@ -8,7 +8,7 @@ const SplineAreaChart = React.memo((props) => {
       enabled: false,
     },
     theme: {
-      mode: "dark",
+      mode: "light",
       palette: "palette1",
     },
     tooltip: {

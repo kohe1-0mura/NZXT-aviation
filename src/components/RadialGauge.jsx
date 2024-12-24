@@ -46,7 +46,7 @@ const RadialGauge = React.memo((props) => {
         },
         track: {
           show: true,
-          background: "#f2f2f2",
+          background: "#444444",
           strokeWidth: "20%",
           opacity: 1,
           margin: 15,
@@ -57,9 +57,9 @@ const RadialGauge = React.memo((props) => {
       colors: [
         function ({ value }) {
           if (value < 60) {
-            return "#00ffff";
+            return "#00FFFF";
           } else if (value >= 60 && value < 80) {
-            return "#ff00ff";
+            return "#FF00FF";
           } else {
             return "#FF0000";
           }
