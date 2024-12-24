@@ -29,6 +29,7 @@ const RadialGauge = React.memo((props) => {
         dataLabels: {
           name: {
             show: false,
+            l
           },
           value: {
             fontSize: "2rem",
@@ -37,6 +38,7 @@ const RadialGauge = React.memo((props) => {
               return val + "°C";
             },
           },
+          offsetX: 30,
         },
         hollow: {
           size: "60%", 
