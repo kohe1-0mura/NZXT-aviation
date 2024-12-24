@@ -88,8 +88,13 @@ const KrakenDisplay = React.memo(() => {
             }}
           >
             LIQUID
+            
           </p>
           <p>{kraken?.temperature || 0}°C</p>
+          <p>{kraken?.fan || 0} RPM</p>
+          <p>{kraken?.pump || 0} RPM</p>
+          <p>{kraken?.liquid || 0}°C</p>
+          <p>{kraken?.load || 0}%</p>
         </LiquidContainer>
 
         <RadialGaugeContainer>
@@ -98,6 +103,7 @@ const KrakenDisplay = React.memo(() => {
         </RadialGaugeContainer>
 
         <CenterContainer>
+          
           <SplineAreaChartContainer>
             <SplineAreaChart cpuWatts={cpuWatts} gpuWatts={gpuWatts} />
           </SplineAreaChartContainer>
