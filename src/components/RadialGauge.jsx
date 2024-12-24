@@ -49,7 +49,8 @@ const RadialGauge = React.memo((props) => {
           imageHeight: 64,
           imageClipped: false,
           position: 'front',
-          imageOffsetY: -30,
+          imageOffsetY: -55,
+          imageOffsetX: 10,
         },
 
         track: {
