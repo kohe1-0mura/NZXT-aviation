@@ -8,10 +8,10 @@ const RadialGauge = React.memo((props) => {
   // label に基づいて開始角度と終了角度を設定
   let startAngle, endAngle;
   
-  if (label === "cpu") {
+  if (label === "CPU") {
     startAngle = 270; // 9時
     endAngle = 60;    // 2時
-  } else if (label === "gpu") {
+  } else if (label === "GPU") {
     startAngle = 90;   // 3時
     endAngle = 300;    // 10時
   } else {
