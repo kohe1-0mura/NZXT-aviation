@@ -32,7 +32,7 @@ const LiquidContainer = styled.div`
 const RadialGaugeContainer = styled.div`
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: space-around;
   height: 247px;
   padding: 0 10px 0;
 `;

@@ -53,6 +53,7 @@ const BarGauge = React.memo((props) => {
       bar: {
         horizontal: true,
         barHeight: "100%",
+        borderRadius: 10, 
       },
     },
     dataLabels: {
