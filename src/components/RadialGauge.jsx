@@ -35,7 +35,7 @@ const RadialGauge = React.memo((props) => {
           },
           value: {
             offsetY: 20,
-            fontSize: "1rem",
+            fontSize: "2rem",
             color: "black",
             formatter: function (val) {
               return val + "°C";
@@ -49,6 +49,7 @@ const RadialGauge = React.memo((props) => {
           imageHeight: 64,
           imageClipped: false,
           position: 'front',
+          imageOffsetY: -30,
         },
 
         track: {
