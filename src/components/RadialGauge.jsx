@@ -47,16 +47,9 @@ const RadialGauge = React.memo((props) => {
         track: {
           show: true,
           background: "#e0e0e0",
-          strokeWidth: "20%",
+          strokeWidth: "100%",
           opacity: 0.7,
           margin: 10,
-          dropShadow: {
-            enabled: true,
-            top: 2,
-            left: 0,
-            blur: 4,
-            opacity: 0.5
-          }
         },
       },
     },
