@@ -53,7 +53,7 @@ const useMonitoring = () => {
       });
 
       setRam({
-        inUse: Math.round((ram.inUse ?? 1) / 1024),
+        inUse: ((ram.inUse ?? 1) / 1024).toFixed(1),
         inUsePercent: Math.round(((ram.inUse ?? 1) / (ram.totalSize ?? 1)) * 100),
         totalSize: Math.round((ram.totalSize ?? 1) / 1024),
       });

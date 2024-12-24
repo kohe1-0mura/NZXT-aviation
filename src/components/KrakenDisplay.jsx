@@ -114,7 +114,7 @@ const KrakenDisplay = React.memo(() => {
         <BottomContainer>
           {[
             { label: "CPU", value: cpu?.frequency || "0", unit: "MHz" },
-            { label: "RAM", value: ram?.inUse || "0", unit: "MB" },
+            { label: "RAM", value: ram?.inUse || "0", unit: "GB" },
             { label: "GPU", value: gpu?.frequency || "0", unit: "MHz" },
           ].map((item, index, array) => (
             <BottomItem key={index}>
