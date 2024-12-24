@@ -56,12 +56,16 @@ const RadialGauge = React.memo((props) => {
     fill: {
       colors: [
         function ({ value }) {
-          if (value < 60) {
-            return "#00FFFF";
-          } else if (value >= 60 && value < 80) {
-            return "#FF00FF";
+          if (value < 20) {
+            return "#00fa9a"; 
+          } else if (value < 40) {
+            return "#FFD700";
+          } else if (value < 60) {
+            return "#FF570D";
+          } else if (value < 80) {
+            return "#FF0461";
           } else {
-            return "#FF0000";
+            return "#DC143C";
           }
         },
       ],
