@@ -71,11 +71,14 @@ const RadialGauge = React.memo((props) => {
       ],
       opacity: 1,
     },
+    stroke: {
+      lineCap: "round"
+    },
 
     labels: [props.label],
   };
 
-  const series = [[props?.data || 0]];
+  const series = [props?.data || 0];
 
   return (
     <>
