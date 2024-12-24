@@ -28,14 +28,11 @@ const RadialGauge = React.memo((props) => {
         endAngle: 90,
         dataLabels: {
           name: {
-            // fontSize: "2rem",
-            // color: "black",
-            // offsetY: -48,
             show: false,
           },
           value: {
+            offsetX: 80,
             offsetY: 20,
-            offsetX: 25,
             fontSize: "2rem",
             color: "black",
             formatter: function (val) {
@@ -53,7 +50,6 @@ const RadialGauge = React.memo((props) => {
           imageOffsetY: -55,
           imageOffsetX: 10,
         },
-
         track: {
           show: true,
           background: "#e0e0e0",

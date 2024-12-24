@@ -34,6 +34,7 @@ const RadialGaugeContainer = styled.div`
   flex-direction: row;
   justify-content: center;
   height: 247px;
+  margin: 0 10px 0;
 `;
 
 const CenterContainer = styled.div`
