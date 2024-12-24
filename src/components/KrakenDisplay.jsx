@@ -85,6 +85,7 @@ const KrakenDisplay = React.memo(() => {
           <p
             style={{
               fontSize: "1.1rem",
+              color: "#444444",
             }}
           >
             LIQUID
