@@ -88,7 +88,6 @@ const KrakenDisplay = React.memo(() => {
             }}
           >
             LIQUID
-            
           </p>
           <p>{kraken?.temperature || 0}°C</p>
           <p>{kraken?.fan || 0} RPM</p>

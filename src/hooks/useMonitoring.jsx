@@ -60,6 +60,8 @@ const useMonitoring = () => {
 
       setKraken({
         temperature: Number(kraken?.liquidTemperature?.toFixed(0)),
+        fan: Number(kraken?.fanSpeed?.toFixed(0)),
+        pump: Number(kraken?.pumpSpeed?.toFixed(0)),
       });
     };
 
