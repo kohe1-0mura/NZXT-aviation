@@ -58,9 +58,6 @@ const BarGauge = React.memo((props) => {
     dataLabels: {
       enabled: false,
     },
-    stroke: {
-      lineCap: "round"
-    },
     fill: {
       colors: [
         function ({ value }) {
