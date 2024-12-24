@@ -3,22 +3,6 @@ import React from "react";
 
 // eslint-disable-next-line react/display-name
 const RadialGauge = React.memo((props) => {
-  const { label, data, icon } = props;
-  
-  // label に基づいて開始角度と終了角度を設定
-  let startAngle, endAngle, isCounterClockwise;
-  
-  if (label === "GPU") {
-    startAngle = 90;   // 3時
-    endAngle = 300;    // 10時
-    isCounterClockwise = true;
-  } else {
-    // デフォルトの角度
-    startAngle = -45;
-    endAngle = 90;
-    isCounterClockwise = false;
-  }
-  
   const options = {
     theme: {
       mode: "light",
@@ -40,8 +24,8 @@ const RadialGauge = React.memo((props) => {
     },
     plotOptions: {
       radialBar: {
-        startAngle: startAngle,
-        endAngle: endAngle,
+        startAngle: -45,
+        endAngle: 90,
         dataLabels: {
           name: {
             show: false,
@@ -56,7 +40,7 @@ const RadialGauge = React.memo((props) => {
         },
         hollow: {
           size: "60%", 
-          image: icon,
+          image: props.icon,
           imageWidth: 64, 
           imageHeight: 64,
           imageClipped: false,
@@ -94,25 +78,22 @@ const RadialGauge = React.memo((props) => {
     stroke: {
       lineCap: "round"
     },
+
     labels: [],
   };
 
-  const series = [data || 0];
-
-  const chartStyle = isCounterClockwise
-    ? { transform: "scale(1, -1)" } // 水平方向に反転
-    : {};
+  const series = [props?.data || 0];
 
   return (
-    <div style={chartStyle}>
+    <>
       <ReactApexChart
         options={options}
         series={series}
         type="radialBar"
         height="350px"
       />
-    </div>
+    </>
   );
-});
+})
 
 export default RadialGauge;
