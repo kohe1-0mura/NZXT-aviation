@@ -35,6 +35,7 @@ const RadialGaugeContainer = styled.div`
   justify-content: center;
   gap: 10px; 
   height: 247px;
+  padding: 0 20px;
 `;
 
 const CenterContainer = styled.div`
