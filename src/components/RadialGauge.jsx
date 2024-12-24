@@ -35,6 +35,7 @@ const RadialGauge = React.memo((props) => {
           },
           value: {
             offsetY: 20,
+            offsetX: 10,
             fontSize: "2rem",
             color: "black",
             formatter: function (val) {
