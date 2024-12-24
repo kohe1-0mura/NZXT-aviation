@@ -112,7 +112,7 @@ const KrakenDisplay = React.memo(() => {
         <BottomContainer>
           {[
             { label: "CPU", value: cpu?.frequency || "0", unit: "MHz" },
-            { label: "PUMP", value: cpu?.fan || "0", unit: "RPM" },
+            { label: "PUMP", value: kraken?.fan || "0", unit: "RPM" },
             { label: "GPU", value: gpu?.frequency || "0", unit: "MHz" },
           ].map((item, index, array) => (
             <BottomItem key={index}>
