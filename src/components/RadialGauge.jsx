@@ -5,7 +5,7 @@ import React from "react";
 const RadialGauge = React.memo((props) => {
   const options = {
     theme: {
-      mode: "dark",
+      mode: "light",
     },
     tooltip: {
       enabled: false,
