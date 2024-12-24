@@ -100,7 +100,7 @@ const RadialGauge = React.memo((props) => {
   const series = [data || 0];
 
   const chartStyle = isCounterClockwise
-    ? { transform: "scale(-1, 1)" } // 水平方向に反転
+    ? { transform: "scale(1, -1)" } // 水平方向に反転
     : {};
 
   return (
