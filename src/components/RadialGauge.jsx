@@ -29,12 +29,12 @@ const RadialGauge = React.memo((props) => {
         dataLabels: {
           name: {
             show: false,
-            offsetX: 0,
+            offsetX: 30,
           },
           value: {
             fontSize: "2rem",
             color: "black",
-            offsetX: 0,
+            offsetX: 30,
             formatter: function (val) {
               return val + "°C";
             },
@@ -49,7 +49,7 @@ const RadialGauge = React.memo((props) => {
           imageClipped: false,
           position: 'front',
           imageOffsetY: -55,
-          imageOffsetX: 10,
+          // imageOffsetX: 10,
         },
         track: {
           show: true,
