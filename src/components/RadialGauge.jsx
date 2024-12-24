@@ -28,13 +28,14 @@ const RadialGauge = React.memo((props) => {
         endAngle: 90,
         dataLabels: {
           name: {
-            fontSize: "2rem",
-            color: "black",
-            offsetY: -48,
+            // fontSize: "2rem",
+            // color: "black",
+            // offsetY: -48,
+            show: false,
           },
           value: {
-            offsetY: 0,
-            fontSize: "4rem",
+            offsetY: 20,
+            fontSize: "1rem",
             color: "black",
             formatter: function (val) {
               return val + "°C";
@@ -42,8 +43,14 @@ const RadialGauge = React.memo((props) => {
           },
         },
         hollow: {
-          size: "55%",
+          size: "60%", 
+          image: props.icon,
+          imageWidth: 64, 
+          imageHeight: 64,
+          imageClipped: false,
+          position: 'front',
         },
+
         track: {
           show: true,
           background: "#e0e0e0",
@@ -75,7 +82,7 @@ const RadialGauge = React.memo((props) => {
       lineCap: "round"
     },
 
-    labels: [props.label],
+    labels: [],
   };
 
   const series = [props?.data || 0];

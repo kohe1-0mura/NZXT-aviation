@@ -6,6 +6,8 @@ import BarGauge from "./BarGauge";
 import SplineAreaChart from "./SplineAreaChart";
 
 import useMonitoring from "../hooks/useMonitoring";
+import cpuIcon from '../../public/cpu.png';
+import gpuIcon from '../../public/vga-card.png';;
 
 const OuterContainer = styled.div`
   background-image: url("./Frame_1.svg");
@@ -94,8 +96,8 @@ const KrakenDisplay = React.memo(() => {
         </LiquidContainer>
 
         <RadialGaugeContainer>
-          <RadialGauge data={cpu?.temperature} label={"CPU"} />
-          <RadialGauge data={gpu?.temperature} label={"GPU"} />
+          <RadialGauge data={cpu?.temperature} label={"CPU"} icon={cpuIcon}/>
+          <RadialGauge data={gpu?.temperature} label={"GPU"} icon={gpuIcon}/>
         </RadialGaugeContainer>
 
         <CenterContainer>
