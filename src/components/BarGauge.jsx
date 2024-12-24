@@ -64,11 +64,11 @@ const BarGauge = React.memo((props) => {
           if (value < 20) {
             return "#00FA9A"; 
           } else if (value < 40) {
-            return "#FFD700";
+            return "#00FA9A";
           } else if (value < 60) {
-            return "#FF570D";
+            return "#FFD700";
           } else if (value < 80) {
-            return "#FF0461";
+            return "#FF570D";
           } else {
             return "#DC143C";
           }
